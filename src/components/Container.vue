@@ -61,6 +61,7 @@
         <el-button type="text" size="medium" icon="el-icon-view" @click="handlePreviewH5">H5预览</el-button>
         <el-button type="text" size="medium" icon="el-icon-tickets" @click="handleGenerateJson">生成JSON</el-button>
         <el-button type="text" size="medium" icon="el-icon-document" @click="handleGenerateCode">生成代码</el-button>
+        <slot name="action" :model="widgetForm"></slot>
       </el-header>
       <el-main :class="{'widget-empty': widgetForm.list.length == 0}">
 
